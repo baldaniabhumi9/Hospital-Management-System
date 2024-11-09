@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Emergency Ride Service</title>
+    
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly" async defer></script>
+
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #80a8f3;
+        }
+
+        #app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #cc2ad1;
+            color: rgb(2, 1, 17);
+            text-align: match parent;
+            padding: 15px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #map-container {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #e24eb6;
+            color: white;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #68b679;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #3192f3;
+            color: rgb(250, 196, 49);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #location-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #location-display {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app-container">
+        <header>
+            <h1>Emergency Ride Service</h1>
+          <h2> <style>
+            .center-text {
+                text-align: center;
+            }
+        </style><p>Request a ride instantly in case of emergency</p></h2>
+        </header>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Services in Remote Areas</title>
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+
+        h1 {
+            background-color: #4c87af;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Paragraph Styling */
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        /* Box for Key Takeaways */
+        .key-takeaways {
+            background-color: #2aa191;
+            border-left: 5px solid #cdf55e;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        /* Image Styling */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(169, 253, 13, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .container {
+                padding: 15px;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Emergency Services in Areas Without Hospital Facilities</h1>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="lc2.avif" alt="Emergency services in remote areas">
+        </div>
+
+        <p>
+         
+       In areas where hospital facilities are not readily available, emergency services play a crucial role in providing immediate care and stabilizing patients before they can be transferred to the nearest healthcare center, often located far away. 
+  </p>
+       <p>
+    
+       These services are typically supported by a network of mobile clinics, first responders, and trained paramedics who are equipped with essential medical tools and medications. In many cases, emergency vehicles like ambulances or all-terrain rescue units are used to navigate challenging terrains. Telemedicine can also be a key component, with remote consultations between local responders and doctors or specialists in larger cities to guide treatment decisions. 
+       </p>
+       <p>    
+            Additionally, community health workers and volunteers may be trained to handle basic emergency procedures, providing vital support in the absence of formal hospital facilities. While challenges like limited resources and delayed access to advanced care persist, such emergency systems are critical in minimizing fatalities and ensuring that even in the most isolated areas, timely assistance is available.
+        </p>
+
+        <div class="image-container">
+            <img src="lc4.jpg" alt="Mobile Clinic providing emergency services">
+        </div>
+
+        <div class="key-takeaways">
+            <strong>Key Takeaways:</strong><br>
+            - Emergency services bridge the gap in the absence of hospitals.<br>
+            - Mobile clinics, paramedics, and telemedicine are essential.<br>
+            - Challenges like terrain and limited resources can complicate access to care.
+        </div>
+
+        <div class="image-container">
+            <img src="lifecare1.jpg" alt="Paramedic rescue operation">
+        </div>
+
+        <div class="image-container">
+            <img src="lc5.jpg" alt="Telemedicine consultation in remote areas">
+        </div>
+    </div>
+
+    
+
+    
+        <main>
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+
+            <div id="location-info">
+                <button onclick="getLocation()">Get Current Location</button>
+                <p id="location-display">Your Location: Not yet available</p>
+            </div>
+
+            <button id="request-ride" onclick="requestRide()">Request Ride</button>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Emergency Ride Service</p>
+        </footer>
+    </div>
+
+    <script>
+        let map;
+        let userMarker;
+        let userLocation = { lat: 0, lng: 0 }; // Default location
+
+        // Initialize the map
+        function initMap() {
+            // Set default center if no location is available
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 37.7749, lng: -122.4194 }, // Default to San Francisco
+                zoom: 12
+            });
+
+            // Attempt to get the user's location when the page loads
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    userLocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    setMapLocation(userLocation); // Update the map and display the location
+                }, function() {
+                    alert("Geolocation is not supported by this browser or permission denied.");
+                });
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        // Set the location on the map
+        function setMapLocation(location) {
+            map.setCenter(location);
+            if (!userMarker) {
+                userMarker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    title: "Your Location"
+                });
+            } else {
+                userMarker.setPosition(location);
+            }
+
+            document.getElementById("location-display").innerText = `Your Location: ${location.lat}, ${location.lng}`;
+        }
+
+        // Get the user's location when they click the button
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    userLocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    setMapLocation(userLocation); // Update the map and display the location
+                }, function() {
+                    alert("Unable to retrieve your location.");
+                });
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+    
+        function requestRide() {
+            if (userLocation.lat === 0 && userLocation.lng === 0) {
+                alert("Please enable location access before requesting a ride.");
+                return;
+            }
+
+            // Example action for requesting a ride
+            alert(`Ride requested from your location: ${userLocation.lat}, ${userLocation.lng}`);
+        }
+    </script>
+    <a href="https://docs.google.com/spreadsheets/d/1Zqnz1wWlVThm9wKw615AgOfSuLLmU_ginvPWdPXWdz0/edit?gid=2018767395#gid=2018767395&fvid=1262629832"></a>
+
+</body>
+</html>
